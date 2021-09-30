@@ -1,5 +1,5 @@
 source ~/.env
-source ~/src/etc/bash/project.bash
+source $ETC_DIR/bash/project.bash
 
 #alias ss='svn stat'
 alias ss='git status -s'
