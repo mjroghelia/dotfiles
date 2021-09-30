@@ -1,0 +1,87 @@
+// Place your settings in this file to overwrite the default settings
+{
+  "editor.detectIndentation": true,
+  "editor.minimap.enabled": false,
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": true
+  },
+  "editor.wordWrap": true,
+  "extensions.ignoreRecommendations": true,
+  "files.autoSave": "afterDelay",
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "files.insertFinalNewline": true,
+  "java.errors.incompleteClasspath.severity": "ignore",
+  "python.linting.enabled": false,
+  "python.linting.enabledWithoutWorkspace": false,
+  "python.disablePromptForFeatures": [
+    "pylint"
+  ],
+  "search.useIgnoreFiles": true,
+  "team.showWelcomeMessage": false,
+  "vim.cursorStylePerMode.insert": "line",
+  "vim.disableAnnoyingNeovimMessage": true,
+  "vim.leader": ",",
+  "vim.mouseSelectionGoesIntoVisualMode": false,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "d"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.closeActiveEditor",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "m"],
+      "after": [],
+      "commands": [
+        {
+          //"command": "workbench.action.openNextRecentlyUsedEditorInGroup",
+          // "command": "workbench.action.navigateBack",
+          "command": "workbench.action.openPreviousEditorFromHistory",
+          //"command": "workbench.action.previousEditor",
+          // "command": "workbench.action.quickOpenNavigateNext",
+          "args": []
+        }
+      ]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "c", "space"],
+      "after": [],
+      "commands": [
+        {
+          "command": "editor.action.commentLine",
+          "args": []
+        },
+        {
+          "command": "extension.vim_escape",
+          "args": []
+        }
+      ]
+    }
+  ],
+  "vim.useCtrlKeys": false,
+  "vim.useSystemClipboard": true,
+  "window.zoomLevel": 0,
+  "workbench.activityBar.visible": true,
+  "workbench.editor.showTabs": false,
+  "workbench.iconTheme": "vs-seti",
+  "window.newWindowDimensions": "maximized",
+  "workbench.sideBar.location": "left",
+  "workbench.startupEditor": "newUntitledFile",
+  "explorer.confirmDelete": false,
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  }
+}

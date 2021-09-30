@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\notes"
+		},
+		{
+			"path": "..\\..\\work-notes"
+		}
+	],
+	"settings": {
+		"workbench.editorAssociations": [
+			{
+			"viewType": "vscode.markdown.preview.editor",
+			"filenamePattern": "*.md"
+			}
+		]
+	}
+}

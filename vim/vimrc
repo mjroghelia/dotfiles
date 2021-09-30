@@ -1,0 +1,113 @@
+" This following are copied from Vim's defaults
+
+set nocompatible
+set backspace=indent,eol,start
+set history=200         " keep 200 lines of command line history
+set ruler               " show the cursor position all the time
+set showcmd             " display incomplete commands
+set wildmenu            " display completion matches in a status line
+
+set ttimeout            " time out for key codes
+set ttimeoutlen=100     " wait up to 100ms after Esc for special key
+
+" Show @@@ in the last line if it is truncated.
+set display=truncate
+
+" Show a few lines of context around the cursor.  Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=5
+
+" Do incremental searching when it's possible to timeout.
+if has('reltime')
+  set incsearch
+endif
+
+" Do not recognize octal numbers for Ctrl-A and Ctrl-X, most users find it
+" confusing.
+set nrformats-=octal
+
+if has('mouse')
+  set mouse=a
+endif
+
+syntax on
+filetype plugin indent on
+
+
+" My defaults
+
+let mapleader = ","
+let maplocalleader = ","
+set tabstop=2
+set smarttab
+set shiftwidth=2
+set autoindent
+set expandtab
+set number
+set wrap
+set hidden
+set switchbuf=useopen
+" set hlsearch
+set background=dark
+" set tags=./.tags,.tags,~/.tags,./tags,tags,~/tags
+set autoread
+set laststatus=2 "always show status line
+set statusline=%F\ %y\ %m%=Column:\ %-3c\ \ Line:\ %-9(%l/%L%)\ %6((%p%%)%)\ 
+set belloff=all
+" set visualbell
+set nofoldenable
+set mouse=a
+set clipboard=unnamed
+set cmdheight=2
+
+" Code completion options.  Only do keyword completion in current file, all
+" the other keywords and tags are noise.
+set complete=.
+" Don't show completion menu, just scroll through them bash-style
+set completeopt=
+" Actually, do
+"set completeopt=menu,longest,preview
+
+" Make it easily to execute window commands
+nmap <leader>w <C-w>
+
+" Switch to most recently used buffer
+nmap <leader>m :b#<CR>
+
+" Save when leaving insert mode
+" au InsertLeave * silent! write
+
+" Use cursorline to indicate mode
+set cursorline
+au InsertEnter * set nocursorline
+au InsertLeave * set cursorline
+
+" highlight Cursor ctermfg=black ctermbg=white cterm=bold guifg=black guibg=white gui=bold
+" highlight CursorLine ctermfg=black ctermbg=white cterm=bold guifg=black guibg=white gui=bold
+
+"let g:netrw_banner       = 0
+"let g:netrw_keepdir      = 0
+let g:netrw_liststyle    = 3
+"let g:netrw_sort_options = 'i'
+
+" Python
+au FileType python setl autoindent tabstop=4 expandtab shiftwidth=4 softtabstop=4
+
+" Javascript
+"au FileType javascript setl autoindent tabstop=4 expandtab shiftwidth=4 softtabstop=4
+
+" Go
+au FileType go setl autoindent tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
+autocmd FileType go autocmd BufWritePre <buffer> Fmt
+
+" Rust
+au FileType rust compile cargo
+au FileType rust nmap <leader>b :make build<CR>
+au FileType rust nmap <leader>r :make run<CR>
+
+" Clojure
+augroup clojure
+  autocmd FileType clojure setlocal lispwords+=testing,go,go-loop,when-some,if-some
+  autocmd FileType clojure nnoremap <leader>rr :Require<CR>
+  autocmd FileType clojure nnoremap <leader>rt :RunTests<CR>
+augroup END

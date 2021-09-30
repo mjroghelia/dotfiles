@@ -1,0 +1,16 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout]
+"Scancode Map"=hex:00,00,00,00,   00,00,00,00,   04,00,00,00,   1d,e0,3a,00,   1d,00,38,00,   38,00,1d,00,   00,00,00,00
+
+These are blocks of 4 numbers.
+
+00,00,00,00 - header version
+00,00,00,00 - header flags
+03,00,00,00 - number of entries, including terminating null
+1d,e0,3a,00 - right control (1d) mapped to caps lock (3a)
+1d,00,38,00 - left control (1d) mapped to left alt (38)
+38,00,1d,00 - left left alt (38) mapped to control (1d)
+00,00,00,00 - terminating null
+
+For the right hand keys, add e0. For example, right alt is 38,e0

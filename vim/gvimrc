@@ -1,0 +1,17 @@
+" add horizontal scrollbar
+set guioptions+=b
+set nowrap
+
+" set the height and width
+"set columns=185
+"set lines=50
+
+" override commandline vim's background setting
+"set background=light
+
+" This is to automatically switch out of insert mode when you save.
+iunmenu File.Save 
+imenu <silent> File.Save <Esc>:if expand("%") == ""<Bar>browse confirm w<Bar>else<Bar>confirm w<Bar>endif<CR>
+
+" Turn off the toolbar
+set guioptions-=T

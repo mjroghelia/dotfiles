@@ -1,0 +1,52 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+    {
+        "key": "ctrl+,",
+        "command": "-workbench.action.openSettings"
+    },
+    {
+        "key": "ctrl+,",
+        "command": "workbench.action.quickOpen"
+    },
+    {
+        "key": "ctrl+,",
+        "command": "workbench.action.quickOpenNavigateNext",
+        "when": "inQuickOpen"
+    },
+    {
+        "key": "shift+ctrl+,",
+        "command": "workbench.action.quickOpenNavigatePrevious",
+        "when": "inQuickOpen"
+    },
+    {
+        "key": "alt+p",
+        "command": "workbench.action.quickOpen"
+    },
+    {
+        "key": "shift+alt+p",
+        "command": "workbench.action.showCommands"
+    },
+    {
+        "key": "alt+p",
+        "command": "workbench.action.quickOpenNavigateNext",
+        "when": "inQuickOpen"
+    },
+    {
+        "key": "shift+alt+p",
+        "command": "workbench.action.quickOpenNavigatePrevious",
+        "when": "inQuickOpen"
+    }
+    /*
+    ,
+    {
+        "key": "ctrl+n",
+        "command": "workbench.action.quickOpenNavigateNext",
+        "when": "inQuickOpen"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "workbench.action.quickOpenNavigatePrevious",
+        "when": "inQuickOpen"
+    }
+    */
+]

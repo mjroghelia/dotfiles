@@ -1,0 +1,62 @@
+[user]
+	name = Mark Roghelia
+{{#is_work}}
+	email = mark.roghelia@microsoft.com
+{{/is_work}}
+{{^is_work}}
+	email = mark@roboshark.com
+{{/is_work}}
+
+[alias]
+	co = checkout
+	br = branch
+	recent = branch --sort=-committerdate --format="%(committerdate:relative)%09%(refname:short)"
+
+[core]
+	excludesfile = {{gitignore}}
+	editor = vim --nofork -c 'startinsert'
+{{^is_windows}}
+	autocrlf = input
+{{/is_windows}}
+{{#is_windows}}
+	autocrlf = true
+  	safecrlf = true
+   	preloadindex = true
+  	fscache = true
+   	sshcommand = C:/Windows/System32/OpenSSH/ssh.exe
+{{/is_windows}}
+
+[index]
+	threads = true
+
+[branch]
+	autosetuprebase = always
+
+[push]
+	default = upstream
+
+[fetch]
+	prune = true
+
+[merge]
+    tool = vscode
+
+[mergetool "vscode"]
+    cmd = code --wait $MERGED
+
+[diff]
+    tool = vscode
+
+[difftool "vscode"]
+    cmd = code --wait --diff $LOCAL $REMOTE
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
+{{#is_wsl}}
+[credential]
+    helper = /mnt/c/Program\\ Files/Git/mingw64/libexec/git-core/git-credential-manager.exe
+{{/is_wsl}}
