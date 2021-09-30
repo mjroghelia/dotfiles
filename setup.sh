@@ -19,6 +19,7 @@ pip3 install --user -r "$DIR/python/requirements.txt"
 python3 $DIR/bash/setup.py
 python3 $DIR/git/setup.py
 python3 $DIR/powershell/setup.py
+python3 $DIR/pry/setup.py
 python3 $DIR/vim/setup.py
 
 if hash code 2>/dev/null; then

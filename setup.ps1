@@ -13,6 +13,7 @@ pip install -r "$PythonPath\requirements.txt"
 pip install pyreadline
 python "$PSScriptRoot\git\setup.py"
 python "$PSScriptRoot\powershell\setup.py"
+python "$PSScriptRoot\pry\setup.py"
 python "$PSScriptRoot\vim\setup.py"
 python "$PSScriptRoot\vscode\setup.py"
 python "$PSScriptRoot\windows-terminal\setup.py"
