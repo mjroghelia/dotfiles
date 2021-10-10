@@ -1,0 +1,24 @@
+source ~/.env
+
+if [ -n "$ETC_DIR" ]
+then
+    export PYTHONPATH=$ETC_DIR/python:$PYTHONPATH
+    export PATH=$ETC_DIR:$PATH
+fi
+
+alias ss='git status -s'
+
+export EDITOR='vim --nofork'
+export GIT_EDITOR="$EDITOR -c start"
+export VIM_GUI=false
+
+if [ "$ETC_PLATFORM" = "mac" ]; then
+
+  if type brew &>/dev/null; then
+    FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+
+    autoload -Uz compinit
+    compinit
+  fi
+
+fi

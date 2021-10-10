@@ -26,4 +26,6 @@ if hash code 2>/dev/null; then
   python3 $DIR/vscode/setup.py
 fi
 
+python3 $DIR/zsh/setup.py
+
 echo "Environment setup complete."
