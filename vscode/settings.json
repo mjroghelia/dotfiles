@@ -7,7 +7,6 @@
     "comments": false,
     "strings": true
   },
-  "editor.wordWrap": true,
   "extensions.ignoreRecommendations": true,
   "files.autoSave": "afterDelay",
   "files.exclude": {
