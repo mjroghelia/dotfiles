@@ -7,11 +7,12 @@ $env:LESSCHARSET="utf-8"
 
 if ($IsWindows -Or $env:OS -eq "Windows_NT") {
     Set-Alias less more 
-    $env:PYTHONPATH = (Join-Path $HOME "src/etc/python")
 }
 elseif ($IsMacOS) {
     $env:PATH += ":/usr/local/bin"
 }
+
+$env:PYTHONPATH = (Join-Path $HOME "src/dotfiles/python")
 
 # Add GitHub cli completions
 Invoke-Expression -Command $(gh completion -s powershell | Out-String)

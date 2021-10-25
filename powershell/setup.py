@@ -10,14 +10,7 @@ src_dir = etc.src()
 if (not src_dir.exists()):
     os.makedirs(src_dir)
 
-poshgit_dir = src_dir / 'posh-git'
-poshgit_file = poshgit_dir / "src" / "posh-git.psd1"
-
-if (not poshgit_dir.exists()):
-    print("Cloning posh-git...")
-    subprocess.run(["git", "clone", "https://github.com/dahlbyk/posh-git.git", str(poshgit_dir)])
-else:
-    print("posh-git already cloned.")
+subprocess.run(["pwsh", "-Command", "\"Install-Module posh-git\""])
 
 def render_profile(directory, name="Profile.ps1"):
     print("Rendering {} to {}...".format(name, directory))

@@ -1,7 +1,7 @@
 $SourcePath = Join-Path $HOME "src"
 
 function Initialize-PoshGit {
-    Import-Module (Join-Path $SourcePath "posh-git/src/posh-git.psd1")
+    Import-Module posh-git
     $GitPromptSettings.WindowTitle = {
         param($GitStatus, [bool]$IsAdmin) 
         "$(if ($IsAdmin) {'Admin: '})$(if ($GitStatus) {"$($GitStatus.RepoName) [$($GitStatus.Branch)]"} else {Get-PromptPath})"
