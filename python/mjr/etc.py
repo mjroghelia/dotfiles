@@ -57,6 +57,11 @@ def is_work():
     var = os.getenv('ETC_WORK')
     return (var is not None and var.lower() == 'true')
 
+def symlink_dotfile(filename):
+    src = script_dir() / filename
+    dest = home() / ('.' + filename)
+    update_symlink(src, dest)
+
 def update_symlink(src, dest):
     if os.path.exists(dest):
         os.remove(dest)

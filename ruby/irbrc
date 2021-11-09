@@ -1,0 +1,4 @@
+def src(klass, method_sym)
+  method = (klass.methods.include?(method_sym) && klass.method(method_sym)) || (klass.instance_methods.include?(method_sym) && klass.instance_method(method_sym))
+  method.source_location if method
+end
