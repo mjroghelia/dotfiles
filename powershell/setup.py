@@ -13,8 +13,9 @@ if (not src_dir.exists()):
 subprocess.run(["pwsh", "-Command", "\"Install-Module posh-git\""])
 
 def render_profile(directory, name="Profile.ps1"):
+    toolbox_dir = src_dir / "toolbox"
     print("Rendering {} to {}...".format(name, directory))
-    etc.render_mustache("profile.mustache", directory, name)
+    etc.render_mustache("profile.mustache", directory, name, toolbox_dir=toolbox_dir.as_posix())
 
 if etc.is_windows():
     render_profile(etc.documents() / "WindowsPowerShell")

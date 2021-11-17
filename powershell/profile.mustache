@@ -1,5 +1,5 @@
 . (Join-Path "{{ script_dir }}" "profile.ps1")
 . (Join-Path "{{ script_dir }}" "project.ps1")
 {{#is_work}}
-. (Join-Path $HOME "\src\toolbox\profile.ps1")
+. (Join-Path "{{ toolbox_dir }}" "profile.ps1")
 {{/is_work}}
