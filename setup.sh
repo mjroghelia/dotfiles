@@ -4,6 +4,10 @@ DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")"; pwd)
 
 echo "Setting up environment..."
 
+if [[ "$CODESPACES" == "true" ]] && [[ "$GITHUB_REPOSITORY" == "github/"* ]]; then
+  export ETC_WORK=true
+fi
+
 if [[ "$OSTYPE" == "linux-gnu" ]] && [[ $(lsb_release -si) == "Ubuntu" ]]; then
   echo "Installing Python 3..."
   sudo apt update
