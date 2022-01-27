@@ -1,5 +1,6 @@
 # README
 
+Hi 
 Misc configuration files and small scripts.
 
 ## Setup
