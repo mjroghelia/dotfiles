@@ -1,9 +1,9 @@
 {
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    "actions":
+    "actions": 
     [
         {
-            "command":
+            "command": 
             {
                 "action": "copy",
                 "singleLine": false
@@ -11,7 +11,7 @@
             "keys": "ctrl+c"
         },
         {
-            "command":
+            "command": 
             {
                 "action": "copy",
                 "singleLine": false
@@ -19,7 +19,7 @@
             "keys": "ctrl+shift+c"
         },
         {
-            "command":
+            "command": 
             {
                 "action": "switchToTab",
                 "index": 7
@@ -27,7 +27,7 @@
             "keys": "alt+8"
         },
         {
-            "command":
+            "command": 
             {
                 "action": "switchToTab",
                 "index": 7
@@ -39,21 +39,21 @@
             "keys": "ctrl+v"
         },
         {
-            "command":
+            "command": 
             {
                 "action": "newTab"
             },
             "keys": "alt+t"
         },
         {
-            "command":
+            "command": 
             {
                 "action": "newTab"
             },
             "keys": "ctrl+t"
         },
         {
-            "command":
+            "command": 
             {
                 "action": "switchToTab",
                 "index": 0
@@ -61,7 +61,7 @@
             "keys": "alt+1"
         },
         {
-            "command":
+            "command": 
             {
                 "action": "switchToTab",
                 "index": 0
@@ -73,21 +73,21 @@
             "keys": "ctrl+shift+f"
         },
         {
-            "command":
+            "command": 
             {
                 "action": "nextTab"
             },
             "keys": "alt+]"
         },
         {
-            "command":
+            "command": 
             {
                 "action": "nextTab"
             },
             "keys": "ctrl+]"
         },
         {
-            "command":
+            "command": 
             {
                 "action": "splitPane",
                 "split": "auto",
@@ -96,7 +96,7 @@
             "keys": "alt+shift+d"
         },
         {
-            "command":
+            "command": 
             {
                 "action": "switchToTab",
                 "index": 5
@@ -104,7 +104,7 @@
             "keys": "alt+6"
         },
         {
-            "command":
+            "command": 
             {
                 "action": "switchToTab",
                 "index": 5
@@ -120,21 +120,21 @@
             "keys": "ctrl+w"
         },
         {
-            "command":
+            "command": 
             {
                 "action": "prevTab"
             },
             "keys": "alt+["
         },
         {
-            "command":
+            "command": 
             {
                 "action": "prevTab"
             },
             "keys": "ctrl+["
         },
         {
-            "command":
+            "command": 
             {
                 "action": "switchToTab",
                 "index": 1
@@ -142,7 +142,7 @@
             "keys": "alt+2"
         },
         {
-            "command":
+            "command": 
             {
                 "action": "switchToTab",
                 "index": 1
@@ -150,7 +150,7 @@
             "keys": "ctrl+2"
         },
         {
-            "command":
+            "command": 
             {
                 "action": "switchToTab",
                 "index": 4
@@ -158,7 +158,7 @@
             "keys": "alt+5"
         },
         {
-            "command":
+            "command": 
             {
                 "action": "switchToTab",
                 "index": 4
@@ -166,7 +166,7 @@
             "keys": "ctrl+5"
         },
         {
-            "command":
+            "command": 
             {
                 "action": "switchToTab",
                 "index": 2
@@ -174,7 +174,7 @@
             "keys": "alt+3"
         },
         {
-            "command":
+            "command": 
             {
                 "action": "switchToTab",
                 "index": 2
@@ -182,7 +182,7 @@
             "keys": "ctrl+3"
         },
         {
-            "command":
+            "command": 
             {
                 "action": "switchToTab",
                 "index": 3
@@ -190,7 +190,7 @@
             "keys": "alt+4"
         },
         {
-            "command":
+            "command": 
             {
                 "action": "switchToTab",
                 "index": 3
@@ -198,7 +198,7 @@
             "keys": "ctrl+4"
         },
         {
-            "command":
+            "command": 
             {
                 "action": "switchToTab",
                 "index": 6
@@ -206,7 +206,7 @@
             "keys": "alt+7"
         },
         {
-            "command":
+            "command": 
             {
                 "action": "switchToTab",
                 "index": 6
@@ -214,7 +214,7 @@
             "keys": "ctrl+7"
         },
         {
-            "command":
+            "command": 
             {
                 "action": "switchToTab",
                 "index": 8
@@ -222,7 +222,7 @@
             "keys": "alt+9"
         },
         {
-            "command":
+            "command": 
             {
                 "action": "switchToTab",
                 "index": 8
@@ -234,10 +234,10 @@
     "copyOnSelect": false,
     "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
     "launchMode": "maximized",
-    "profiles":
+    "profiles": 
     {
         "defaults": {},
-        "list":
+        "list": 
         [
             {
                 "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
@@ -258,33 +258,21 @@
                 "name": "Command Prompt"
             },
             {
-                "guid": "{5fb123f1-af88-5b5c-8953-d14a8def1978}",
-                "hidden": true,
-                "name": "PowerShell 7",
-                "source": "Windows.Terminal.PowershellCore"
+                "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+                "hidden": false,
+                "name": "Ubuntu",
+                "source": "Windows.Terminal.Wsl",
+                "startingDirectory": "\\\\wsl$\\Ubuntu"
             },
             {
                 "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
                 "hidden": false,
                 "name": "Azure Cloud Shell",
                 "source": "Windows.Terminal.Azure"
-            },
-            {
-                "guid": "{c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40}",
-                "hidden": false,
-                "name": "Ubuntu-18.04",
-                "source": "Windows.Terminal.Wsl",
-                "startingDirectory": "//wsl$/Ubuntu-18.04/home/mark"
-            },
-            {
-                "guid": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
-                "hidden": false,
-                "name": "Ubuntu-20.04",
-                "source": "Windows.Terminal.Wsl"
             }
         ]
     },
-    "schemes":
+    "schemes": 
     [
         {
             "background": "#0C0C0C",
