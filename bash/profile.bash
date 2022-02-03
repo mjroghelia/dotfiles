@@ -19,7 +19,7 @@ export PS1="\[\e[0;34m\]\w \[\e[1;37m\]\$\[\e[0m\] "
 
 export PYTHONPATH=~/src/etc/python:$PYTHONPATH
 
-PATH=~/bin:~/src/etc/bin:$PATH
+PATH=~/bin:~/src/etc/bin:~/.local/bin:$PATH
 
 if [ "$ETC_PLATFORM" == "mac" ]; then
 
