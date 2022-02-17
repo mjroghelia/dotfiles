@@ -10,7 +10,7 @@ src_dir = etc.src()
 if (not src_dir.exists()):
     os.makedirs(src_dir)
 
-subprocess.run(["pwsh", "-Command", "\"Install-Module posh-git\""])
+subprocess.run(["pwsh", "-Command", "\"Install-Module posh-git -Force\""])
 
 def render_profile(directory, name="Profile.ps1"):
     toolbox_dir = src_dir / "toolbox"
@@ -18,8 +18,8 @@ def render_profile(directory, name="Profile.ps1"):
     etc.render_mustache("profile.mustache", directory, name, toolbox_dir=toolbox_dir.as_posix())
 
 if etc.is_windows():
-    render_profile(etc.documents() / "WindowsPowerShell")
-    render_profile(etc.documents() / "PowerShell")
+    render_profile(etc.home() / "Documents" / "WindowsPowerShell")
+    render_profile(etc.home() / "Documents" / "PowerShell")
 else:
     render_profile(etc.home() / ".config" / "powershell", "profile.ps1")
 
