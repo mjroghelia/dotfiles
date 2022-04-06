@@ -16,6 +16,13 @@ if (not env_file.exists()):
         f.write('ETC_WORK={}\n'.format(str(etc.is_work()).lower()))
 
 if (etc.is_codespace() and etc.is_work()):
+    print("Adding .bash_aliases to .bashrc")
+    alias_src = etc.script_dir() / "aliases"
+    with open(etc.home() / ".bashrc", "a") as rc:
+        rc.write("\n")
+        rc.write("source ")
+        rc.write(str(alias_src))
+        rc.write("\n")
 
 elif (not etc.is_windows()):
     alias_src = etc.script_dir() / "aliases"

@@ -6,11 +6,11 @@ then
 fi
 
 if [ -f ~/.bash_aliases ]; then
-	. ~/.bash_aliases
+  . ~/.bash_aliases
 fi
 
 # if [ -f ~/.bashrc ]; then
-# 	. ~/.bashrc
+#   . ~/.bashrc
 # fi
 
 alias ss='git status -s'
@@ -25,7 +25,7 @@ export GIT_EDITOR="$EDITOR -c start"
 export VIM_GUI=false
 export PS1="\[\e[0;34m\]\w \[\e[1;37m\]\$\[\e[0m\] "
 
-export PYTHONPATH=~/src/etc/python:$PYTHONPATH
+export PYTHONPATH=$ETC_DIR/python:$PYTHONPATH
 
 PATH=~/bin:~/src/etc/bin:~/.local/bin:$PATH
 
