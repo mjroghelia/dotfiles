@@ -58,7 +58,7 @@ def is_work():
     return (var is not None and var.lower() == 'true')
 
 def is_codespace():
-    var = os.getenv('CODESPACES"')
+    var = os.getenv('CODESPACES')
     return (var is not None and var.lower() == 'true')
 
 def symlink_dotfile(filename):
