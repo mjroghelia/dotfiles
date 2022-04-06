@@ -1,0 +1,2 @@
+alias ss='git status -s'
+alias be='bundle exec'

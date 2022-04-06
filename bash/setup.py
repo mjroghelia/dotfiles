@@ -15,10 +15,12 @@ if (not env_file.exists()):
         f.write('ETC_PLATFORM={}\n'.format(etc.platform()))
         f.write('ETC_WORK={}\n'.format(str(etc.is_work()).lower()))
 
-if (not etc.is_windows()):
-    rc_src = etc.script_dir() / "bashrc"
-    print("Linking .bashrc to {}...".format(rc_src))
-    etc.update_symlink(rc_src, etc.home() / ".bashrc")
+if (etc.is_codespace() and etc.is_work()):
+
+elif (not etc.is_windows()):
+    alias_src = etc.script_dir() / "aliases"
+    print("Linking .bash_aliases to {}...".format(alias_src))
+    etc.update_symlink(alias_src, etc.home() / ".bash_aliases")
 
     profile_src = etc.script_dir() / "profile.bash"
     print("Linking .bash_profile to {}...".format(profile_src))

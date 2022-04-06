@@ -57,6 +57,10 @@ def is_work():
     var = os.getenv('ETC_WORK')
     return (var is not None and var.lower() == 'true')
 
+def is_codespace():
+    var = os.getenv('CODESPACES"')
+    return (var is not None and var.lower() == 'true')
+
 def symlink_dotfile(filename):
     src = script_dir() / filename
     dest = home() / ('.' + filename)

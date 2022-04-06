@@ -1,6 +1,29 @@
-if [ -f ~/.bashrc ]; then
-	. ~/.bashrc
+source ~/.env
+
+if [ -n "$ETC_DIR" ]
+then
+  source $ETC_DIR/bash/project.bash
 fi
+
+if [ -f ~/.bash_aliases ]; then
+	. ~/.bash_aliases
+fi
+
+# if [ -f ~/.bashrc ]; then
+# 	. ~/.bashrc
+# fi
+
+alias ss='git status -s'
+alias be='bundle exec'
+
+# Don't overwrite the bash history when I leave a session.  This plays better with multiple concurrent sessions
+shopt -s histappend
+
+export TERM=xterm-256color
+export EDITOR='vim --nofork'
+export GIT_EDITOR="$EDITOR -c start"
+export VIM_GUI=false
+export PS1="\[\e[0;34m\]\w \[\e[1;37m\]\$\[\e[0m\] "
 
 export PYTHONPATH=~/src/etc/python:$PYTHONPATH
 
