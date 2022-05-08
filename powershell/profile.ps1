@@ -9,7 +9,7 @@ if ($IsWindows -Or $env:OS -eq "Windows_NT") {
     Set-Alias less more 
 }
 elseif ($IsMacOS) {
-    $env:PATH += ":/usr/local/bin"
+    $env:PATH = ":/usr/local/bin:/usr/local/opt/ruby/bin:" + $env:PATH
 }
 
 $env:PYTHONPATH = (Join-Path $HOME "src/dotfiles/python")
